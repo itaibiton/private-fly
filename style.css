@@ -1,0 +1,534 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 400vh;
+  font-family: "Varela Round", sans-serif;
+  overflow-x: hidden;
+}
+.overlay {
+  z-index: 1;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(7, 138, 224, 0.2);
+  display: none;
+}
+.welcome {
+  position: relative;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: url("/assets/copter2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.welcome-content {
+  position: relative;
+  top: 26%;
+  left: 25%;
+}
+.welcome-content h1 {
+  color: rgba(255, 255, 255, 0.85);
+  position: relative;
+  z-index: 2;
+  font-size: 3rem;
+}
+.welcome-content button {
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid rgba(0, 93, 136, 0.75);
+  position: relative;
+  z-index: 2;
+  border-radius: 10px;
+  color: white;
+  width: 160px;
+  height: 50px;
+  outline: none;
+  background-color: transparent;
+  margin-top: 20px;
+  transition: all 0.4s ease;
+}
+.welcome-content button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.65);
+  color: rgba(0, 93, 136, 0.85);
+  border: none;
+}
+
+.welcome-content button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.welcome-content button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  font-size: 2rem;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.welcome-content button:hover span {
+  padding-right: 25px;
+  padding-top: 10px;
+}
+
+.welcome-content button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.welcome .navbar {
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  padding: 60px;
+}
+.welcome .navbar a {
+  padding: 10px;
+  position: relative;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  margin: 0 40px;
+  font-size: 1.2rem;
+  transition: all 0.5s ease;
+}
+@media screen and (max-width: 800px) {
+  div.welcome .navbar {
+    display: none;
+  }
+  div.welcome-content {
+    top: 26%;
+    left: 10%;
+  }
+  div.plans{
+      flex-direction: column;
+  }
+  div.plans .plan{
+      margin:10px 0;
+      width:70%;
+      height:28%;
+  }
+  div.plan-info p{
+        font-size: 0.8rem;
+  }
+  div.plan-info .btn_buy{
+      padding:10px 10px;
+      font-size: 0.7rem;
+      width: 100px;
+      height: 30px;
+  }
+  div.slideshow-container{
+    display:none;
+  }
+  div.dots{
+    display:none;
+  }
+  body{
+    height: 500vh;
+  }
+  div.gallery-phone{
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+  }
+  div.gallery-phone img{
+    width:130%;
+    height:50vh;
+  }
+  div.contact{
+    height:50%;
+  }
+  div.contact .contact-info{
+    flex-direction: column;
+    position:relative;
+    align-items: flex-start;
+    height:30%;
+  }
+  div.contact .contact-info section{
+    width:70vw;
+    text-align: left;
+    margin-top:40px;
+  }
+  div.contact .contact-info .info-details .r{
+    display:flex;
+    padding:0;
+    font-size: 1.4rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  div.burger{
+    display:block;
+  }
+}
+
+.mySlides img{
+  width:100%;
+  height:90vh;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.1),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.1),
+  0 12.5px 10px rgba(0, 0, 0, 0.1),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.1),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.1),
+  0 100px 80px rgba(0, 0, 0, 0.13);
+}
+
+.gallery-phone{
+  display:none;
+}
+
+.welcome .navbar a:hover {
+  color: white;
+}
+
+.plans {
+  height: 105vh;
+  position: relative;
+  display: flex;
+  background-image: linear-gradient(to bottom, #005d88, #6281a6, #9ca7c3, #d0d1e0, #ffffff);
+  align-items: center;
+  justify-content: center;
+}
+.plan{
+    width:20vw;
+    height:60vh;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-size: cover;
+    margin:0 20px;
+    transition: all 2s ease;
+}
+#plan1{
+    background-image: url('/assets/copter.jpg');
+}
+
+#plan2{
+    background-image: url('/assets/copter3.jpg');
+    background-position: center;
+}
+
+#plan3{
+    background-image: url('/assets/copter 4.jpg');
+}
+.plan-info{
+    height:100%;
+    width:100%;
+    border-radius: 9px;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255,255,255,.05);
+    color:rgba(255,255,255,0);
+    transition:all 2s ease;
+}
+
+.plan-info:hover{
+    background-color: rgba(255,255,255,.8);
+    color:rgba(0, 93, 136, 0.85);
+}
+.plan:hover{
+    width:22vw;
+    height:70vh;
+    background-color: rgba(255,255,255,.15);
+}
+.btn_buy{
+    font-size: 1rem;
+    font-weight: bold;
+    border: 1px solid rgba(0, 93, 136, 0.75);
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+    color: white;
+    width: 160px;
+    height: 50px;
+    outline: none;
+    background-color: transparent;
+    margin-top: 20px;
+    transition: all 0.4s ease;
+}
+.btn_buy:hover{
+    cursor: pointer;
+    background-color: rgba(0, 93, 136, 0.85);
+    color: white;
+    border: none;
+}
+
+.gallery{
+  height:100%;
+  position: absolute;
+  top:200%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  z-index:5;
+}
+
+.g-bg{
+  height: 100vh;
+}
+.gallery h2{
+  font-size: 2rem;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width:70%;
+  height: 90vh;
+  margin:70px auto 0;
+  position: relative;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  position: relative;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgb(245, 245, 245);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: rgba(0, 93, 136, 0.75);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+    
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: rgba(255,255,255,.75);
+  color: black;
+}
+
+.contact{
+  height: 105vh;
+  width:100%;
+  background-color:rgb(0, 40, 58);
+  color:white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+.contact-info{
+  margin:auto;
+  display: flex;
+  flex-direction: row;
+}
+.contact h1{
+  font-size: 80px;
+}
+
+.contact .contact-info section{
+  width:40vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.info-details .r{
+  font-size: 2rem;
+  width:70%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  bottom:10%;
+  margin-top: 50px;
+}
+
+input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+  font-size: 0.75em;
+  color:rgb(71, 71, 71);
+  top: -5px;
+  -webkit-transition: all 0.225s ease;
+  transition: all 0.225s ease;
+}
+
+.styled-input {
+  float: left;
+  width: 293px;
+  margin: 1rem 0;
+  position: relative;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px){
+  .styled-input {
+      width:100%;
+  }
+}
+
+.styled-input label {
+  color: rgb(71, 71, 71);
+  padding: 1.3rem 30px 1rem 30px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.styled-input.wide { 
+  width: 650px;
+  max-width: 100%;
+}
+
+input,
+textarea {
+  padding: 30px;
+  border: 0;
+  width: 100%;
+  font-size: 1.5rem;
+  background-color: #d4d4d4;
+  color: rgb(71, 71, 71);
+  border-radius: 4px;
+}
+
+input:focus,
+textarea:focus { outline: 0; }
+
+input:focus ~ span,
+textarea:focus ~ span {
+  width: 100%;
+  -webkit-transition: all 0.075s ease;
+  transition: all 0.075s ease;
+}
+
+textarea {
+  width: 100%;
+  min-height: 15em;
+  resize: none;
+}
+
+.input-container {
+  width: 650px;
+  max-width: 100%;
+  margin: 20px auto 25px auto;
+}
+
+.submit-btn {
+  float: right;
+  padding: 20px;
+  border-radius: 10px;
+  border:1px solid rgba(255,255,255,.7);
+  display: inline-block;
+  background-color: transparent;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.06),
+            0 2px 10px 0 rgba(0,0,0,0.07);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(1px);
+  background-color: rgba(255,255,255);
+  color:rgba(0, 93, 136);
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10),
+            0 1px 1px 0 rgba(0,0,0,0.09);
+}
+
+.burger{
+  display:none;
+  position:absolute;
+  top:5px;
+  right:5px;
+  font-size: 35px;
+  color:white;
+  cursor: pointer;
+}
+.mobile-nav{
+  display:none;
+  position:absolute;
+  width: 100%;
+  z-index: 98;
+  height:100vh;
+  background-color:rgba(7, 138, 224);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-nav a{
+  color:white;
+  text-decoration: none;
+  font-size: 40px;
+  margin:30px auto;
+}

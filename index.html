@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">   
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/31e8d10d8a.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="mobile_menu" class="mobile-nav">
+           <i class="fa fa-times" onclick="closeMenu()" aria-hidden="true" style="color:white;font-size: 30px;position:absolute;top:10px;left:10px;cursor:pointer;"></i>
+            <a onclick="closeMenu()" href='#'>Home</a>
+            <a onclick="closeMenu()" href='#plans'>Plans</a>
+            <a onclick="closeMenu()" href='#g-bg'>Gallery</a>
+            <a onclick="closeMenu()" href='#contact-info'>Contact</a>
+        </div>
+        <div class="welcome">
+            <div id="btn_burger" onclick="openMenu()" class="burger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="navbar">
+                    <a href='#'>Home</a>
+                    <a href='#plans'>Plans</a>
+                    <a href='#slider'>Gallery</a>
+                    <a href='#footer'>Contact</a>
+                </div>
+                <div class="welcome-content">
+                    <h1>Private <span style="color:rgba(0, 93, 136, 0.75);">Flight</span></h1>
+                    <a href="#plans"><button class="btn_start"><span>See Our Deals.</span></button></a>
+                </div>
+            </div>
+            <div id="plans" class="plans">
+                <div id="plan1" class="plan">
+                    <div class="plan-info">
+                        <button class="btn_buy">Premium Plan</button>
+                        <p>Our Premium Plan offers a 3 hour flight across any destination you choose.</p>
+                    </div>
+                </div>
+                <div id="plan2" class="plan">
+                    <div class="plan-info">
+                        <button class="btn_buy">Deluxe Plan</button>
+                        <p>Our Deluxe Plan offers 6 hours cross-country experience to your desicion.</p>
+                    </div>
+                </div>
+                <div id="plan3" class="plan">
+                    <div class="plan-info">
+                        <button class="btn_buy">Extreme Plan</button>
+                        <p>Our Extreme Plan offers a 4 horus extremly and exciting flight experience.</p>
+                    </div>
+                </div>
+            </div>
+                <div id ="g-bg" class="g-bg fade"></div>
+                <div id ="gallery" class="gallery">
+                    <div class="gallery-phone">
+                        <img src="1.jpg">
+                        <img src="2.jpg">
+                        <img src="3.jpg">
+                        <img src="4.jpg">
+                    </div>
+                    <div id="slider" class="slideshow-container">
+                            <div class="mySlides fade">
+                            <div class="numbertext">1 / 4</div>
+                            <img src="1.jpg">
+                            </div>
+
+                            <div class="mySlides fade">
+                            <div class="numbertext">2 / 4</div>
+                            <img src="2.jpg">
+                            </div>
+
+                            <div class="mySlides fade">
+                            <div class="numbertext">3 / 4</div>
+                            <img src="3.jpg">
+                            </div>
+
+                            <div class="mySlides fade">
+                            <div class="numbertext">4 / 4</div>
+                            <img src="4.jpg">
+                             </div>
+                             <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                             <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                        </div>
+                        <br>
+                        <div class="dots" style="text-align:center">
+                            <span class="dot"></span> 
+                            <span class="dot"></span> 
+                            <span class="dot"></span> 
+                            <span class="dot"></span> 
+                        </div>
+                </div>
+                <div id="contact" class="contact">
+                    <h1>Lets Talk ...</h1>
+                    <div id="contact-info" class="contact-info">
+                        <section class="input-details">
+                            <div class="row input-container">
+                                <div>
+                                    <div class="styled-input wide">
+                                        <input type="text" required />
+                                        <label>Name</label> 
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="styled-input wide">
+                                        <input type="text" required />
+                                        <label>Email</label> 
+                                    </div>
+                                </div>
+                                <div>
+                                </div>
+                                <div>
+                                    <div class="styled-input wide">
+                                        <textarea required></textarea>
+                                        <label>Message</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="btn-lrg submit-btn">Send Message</div>
+                                </div>
+                        </div>
+                            
+                        </section>
+
+                        <section class="info-details">
+                            <div class ="r">
+                                <i class="fa fa-map-marker"></i>
+                                <p>Israel , Tel Aviv</p>
+                            </div>
+                            <div class ="r">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <p>053 - 9858 - 438</p>
+                            </div>
+                            <div class ="r">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <p>itaibiton2405Gmail.com</p>
+                            </div>
+                        </section>
+                </div>
+            </div>
+            <footer id="footer"></footer>
+            <script src="script.js" async defer></script>
+    </body>
+</html>
